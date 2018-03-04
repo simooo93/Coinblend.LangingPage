@@ -1,0 +1,10 @@
+﻿<div [ngClass]="{'nav-open': menuOpened}">
+    <div id="bodyWithoutMenu" *ngIf="menuOpened" (click)="closeMenu()"></div>
+    <nav-menu></nav-menu>
+    <home></home>
+    <our-services></our-services>
+    <our-team></our-team>
+    <contact-us></contact-us>
+</div>
+
+

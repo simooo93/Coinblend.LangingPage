@@ -1,0 +1,71 @@
+﻿@import './../../../assets/styles/colors.scss';
+
+.fa {
+    color: $main-color
+}
+
+.section-get-started .title-header {
+    text-transform: none;
+}
+
+.section-get-started .button-contact {
+    padding: 25px 0 17px;
+}
+
+.section-get-started .text-description {
+    color: #fff;
+    margin: 40px auto;
+    max-width: 760px;
+}
+
+.section-get-started .text-white {
+    color: #fff;
+}
+
+.section-get-started .text-gold {
+    color: #c5a47e;
+}
+
+.section-get-started .parallax,
+.section-get-started .static-image {
+    height: auto;
+}
+
+.section-get-started .image {
+    height: 100%;
+}
+
+.section-get-started {
+    padding: 0;
+}
+
+.section-get-started .container {
+    margin: 15vh auto;
+}
+
+.section-get-started {
+    padding-bottom: 0;
+}
+
+.section-get-started .container {
+    position: relative;
+    z-index: 100;
+    display: block;
+    margin-top: 30vh;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .section-contact-us {
+        min-height: 570px;
+    }
+
+    .section-contact-us .address {
+        margin-top: 100px;
+    }
+}
+
+.section-get-started .parallax .image,
+.section-get-started .static-image .image {
+    height: 100vh !important;
+}
