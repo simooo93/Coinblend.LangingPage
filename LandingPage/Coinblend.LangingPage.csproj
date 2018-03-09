@@ -32,9 +32,6 @@
 
   <ItemGroup>
     <Content Include="ClientApp\assets\img\CodeRunners-LOGO-01.png" />
-    <Content Include="ClientApp\dist\vendor.css">
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
   </ItemGroup>
 
   <ItemGroup>

@@ -16,7 +16,7 @@ export class NavMenuComponent implements OnInit {
     public logo = logo;
     public transparent: boolean;
     private scrollDistance: Number;
-    private menuOpened: boolean;
+    public menuOpened: boolean;
 
     constructor( @Inject(DOCUMENT) private document: Document,
         @Inject(WINDOW) private window: Window,
