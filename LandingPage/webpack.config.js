@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const AotPlugin = require('@ngtools/webpack').AotPlugin;
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = (env) => {
@@ -25,7 +27,9 @@ module.exports = (env) => {
                
             ]
         },
-        plugins: [new CheckerPlugin()]
+        plugins: [new CheckerPlugin(), new CopyWebpackPlugin([
+            { from: 'ClientApp/assets/i18n', to: '../assets/i18n/' }
+        ])]
     };
 
     // Configuration for client-side bundle suitable for running in browsers

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './components/app/app.component';
@@ -10,11 +10,17 @@ import { HomeComponent } from './components/home/home.component';
 import { OurServicesComponent } from './components/ourservices/ourservices.component';
 import { OurTeamComponent } from './components/ourteam/ourteam.component';
 import { ContactUsComponent } from './components/contactus/contactUs.component';
-
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { ParticlesModule } from 'angular-particle';
 import { WINDOW_PROVIDERS } from "./utils/windowService";
 
 import { NavMenuService } from './components/services/navmenuService';
+
+// AoT requires an exported function for factories
+export function createTranslateLoader(http: HttpClient) {
+    return new TranslateHttpLoader(http, '../assets/i18n/', '.json');
+}
 
 @NgModule({
     declarations: [
@@ -27,9 +33,16 @@ import { NavMenuService } from './components/services/navmenuService';
     ],
     imports: [
         CommonModule,
-        HttpModule,
+        HttpClientModule,
         FormsModule,
         ParticlesModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: (createTranslateLoader),
+                deps: [HttpClient]
+            }
+        }),
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },

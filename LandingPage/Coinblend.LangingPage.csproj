@@ -31,11 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="ClientApp\assets\i18n\en.json" />
     <Content Include="ClientApp\assets\img\CodeRunners-LOGO-01.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ClientApp\assets\i18n\" />
   </ItemGroup>
 
   <ItemGroup>
