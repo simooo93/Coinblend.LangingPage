@@ -8,7 +8,7 @@ import { AppComponent } from './components/app/app.component';
 import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { OurServicesComponent } from './components/ourservices/ourservices.component';
-import { OurTeamComponent } from './components/ourteam/ourteam.component';
+import { AboutComponent } from './components/about/about.component';
 import { ContactUsComponent } from './components/contactus/contactUs.component';
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
@@ -26,7 +26,7 @@ export function createTranslateLoader(http: HttpClient) {
     declarations: [
         AppComponent,
         NavMenuComponent,
-        OurTeamComponent,
+        AboutComponent,
         OurServicesComponent,
         ContactUsComponent,
         HomeComponent
@@ -46,7 +46,7 @@ export function createTranslateLoader(http: HttpClient) {
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'our-team', component: OurTeamComponent },
+            { path: 'about', component: AboutComponent },
             { path: 'our-services', component: OurServicesComponent },
             { path: '**', redirectTo: 'home' }
         ])

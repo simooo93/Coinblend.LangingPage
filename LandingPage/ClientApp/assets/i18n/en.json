@@ -5,5 +5,8 @@
   "FindOutMoreFirst": "Find out more first",
   "SignInHere": "Sign in here",
   "GetStarted": "Get started",
-  "EnterYourEmailAddress":"Enter your email address"
+  "EnterYourEmailAddress": "Enter your email address",
+  "ValueIsACalculationBaseOnVolatility": "* “value” is a calculation based on a blend of volatility, market cap and market valuation. Tracker is updated monthly.",
+  "WhatDoesItDo": "What does it do",
+  "DoYouWantToParticipateInTheCryptocurrencyRevolution": "Do you want  to participate in the cryptocurrency revolution ?"
 }
