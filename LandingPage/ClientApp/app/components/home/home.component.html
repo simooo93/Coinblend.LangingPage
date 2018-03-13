@@ -12,15 +12,18 @@
                     <p>{{'CoinblendProvidesYouAccessToTheMostValuableCryptoAssets' | translate}}</p>
                 </div>
                 <div class="form_container">
-                    <form action="/signup" accept-charset="UTF-8" method="get" id="landing_page_signup_form">
-                        <input class="focus enter-fields" autocomplete="off" type="text" name="email" id="user_email" placeholder="{{'EnterYourEmailAddress' | translate}}">
-                        <input type="submit" value="{{'GetStarted' | translate}}" class="btn btn-fill" data-disable-with="Get Started">
+                    <form accept-charset="UTF-8" method="get" id="landing_page_signup_form">
+                        <input class="focus enter-fields" (input)="emailOnChange($event.target.value)" [(ngModel)]="email" autocomplete="off" type="text" name="email" id="user_email" placeholder="{{'EnterYourEmailAddress' | translate}}">
+                        <button class="btn btn-fill" (click)="sendEmail()"> {{'GetStarted' | translate}} </button>
+                        <div *ngIf="hasError" class="error">
+                            {{'YourEmailIsInvalid' | translate}}
+                        </div>
                     </form>
                 </div>
                 <div class="link_container">
-                    <a href="#features">{{'FindOutMoreFirst' | translate}}</a>
+                    <a (click)="scroll('features')">{{'FindOutMoreFirst' | translate}}</a>
                     <div class="intro-link-separator"></div>
-                    <a href="/what-is-ethereum">{{'SignInHere' | translate}}</a>
+                    <a href="https://app.coinblend.io/#/">{{'SignInHere' | translate}}</a>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">

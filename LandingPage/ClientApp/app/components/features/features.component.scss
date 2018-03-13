@@ -1,0 +1,48 @@
+﻿@import './../../../assets/styles/colors.scss';
+
+#features {
+    .fa {
+        color: $main-color
+    }
+
+    .btn-block {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .svg-text {
+        font-size: 22px;
+        fill: #333;
+    }
+
+    .image-desktop-only {
+    }
+
+
+    @media (max-width: 500px) {
+        .svg-text {
+            font-size: 14px;
+        }
+
+        .image-desktop-only {
+            display: none;
+        }
+    }
+
+
+    @media (max-width: 320px) {
+        .svg-text {
+            font-size: 12px;
+        }
+    }
+
+    ul {
+        li {
+            list-style: none;
+        }
+
+        li:before {
+            content: "\2613";
+        }
+    }
+}

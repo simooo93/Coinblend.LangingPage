@@ -35,7 +35,7 @@ export class NavMenuComponent implements OnInit {
     scroll(elementId: string) {
         var el: HTMLElement | null = document.getElementById(elementId);
         if (el != null) {
-            el.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+            el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
         }
     }
 

@@ -16,13 +16,16 @@
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right navbar-uppercase">
                 <li>
-                    <a (click)="scroll('ourservices')">Our Services</a>
+                    <a (click)="scroll('features')">{{'Features'}}</a>
                 </li>
                 <li>
                     <a (click)="scroll('about')">{{'WhatDoesItDo' | translate}}</a>
                 </li>
                 <li>
-                    <a (click)="scroll('contactus')" class="btn btn-fill">Contact us</a>
+                    <a (click)="scroll('getStarted')">{{'HowToGetStarted' | translate}}</a>
+                </li>
+                <li>
+                    <a (click)="scroll('contactus')" href="https://app.coinblend.io/#/" class="btn btn-fill">{{'SignIn' | translate}}</a>
                 </li>
             </ul>
         </div>

@@ -1,12 +1,12 @@
 ﻿@import './../../../assets/styles/colors.scss';
 
-.filter.filter-color-blue:before {
-    background: $background-color;
+#home {
+    .background-image {
+        background: linear-gradient(rgba(34, 56, 67, 0.2), rgba(34, 56, 67, 0.2)), url('/header-1.jpg') center center;
+    }
 }
 
-.background-image {
-    background: linear-gradient(rgba(34, 56, 67, 0.2), rgba(34, 56, 67, 0.2)), url('/header-1.jpg') center center;
-}
+
 
 .section .footnote {
     font-size: 11px;
@@ -98,12 +98,13 @@
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-        max-width: 520px;
+        width: 620px;
         padding: 20px;
         margin-bottom: 0px;
         background-color: rgba(0,0,0,0.25);
         border-radius: 8px;
         margin: 0 0 20px;
+        flex-wrap: wrap;
 
         input {
             margin-bottom: 0;
@@ -117,13 +118,18 @@
         .btn {
             height: 55px !important;
             padding: 10px 20px;
+            width: 35%;
         }
 
         .enter-fields {
-            width: 280px;
+            width: 60%;
             margin-right: 10px;
             box-sizing: border-box;
             height: 55px !important;
+        }
+
+        .error {
+            color: $brandy-rose-darker
         }
     }
 }
@@ -217,4 +223,59 @@
 .section-header-small .static-image {
     min-height: 50vh;
     height: auto;
+}
+
+@media (min-width: 768px){
+    .content {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .section {
+        .title-modern {
+            font-size: 32px !important;
+        }
+
+        .title-area p {
+            font-size: 13px !important;
+        }
+
+        .content {
+            .form_container .enter-fields {
+                font-size: 11px !important;
+            }
+
+            .form_container .btn {
+                font-size: 11px !important;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .footnote {
+                font-size: 8px;
+            }
+
+            .stats {
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            .description {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 320px) {
+    .section {
+        .content {
+
+            .form_container .btn {
+                font-size: 9px !important;
+            }
+        }
+    }
 }

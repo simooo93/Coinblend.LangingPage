@@ -1,0 +1,85 @@
+﻿@import './../../../assets/styles/colors.scss';
+
+.fa {
+    color: $main-color
+}
+
+#getStarted {
+    margin-bottom: 50px;
+    //background-color: $brandy-rose-lighter;
+    .filter.filter-color-blue:before {
+        background: $outer-space;
+    }
+
+    .background-image {
+        background: linear-gradient(rgba(34, 56, 67, 0.2), rgba(34, 56, 67, 0.2)), url('/getStarteBackgroundImage.jpg') center center;
+    }
+
+    &.section {
+        padding: 0;
+
+        .image {
+            z-index: 2;
+        }
+    }
+
+    .step {
+        cursor: pointer;
+        margin-bottom: 30px;
+        display: flex;
+
+        &.active {
+            .step-number > .number {
+                border: 1px solid transparent !important;
+                color: white !important;
+                background-color: $brandy-rose;
+            }
+
+            .step-text > .number-label {
+                color: $brandy-rose;
+            }
+        }
+
+        .step-number {
+            color: $brandy-rose;
+            font-size: 15px;
+            font-family: 'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+            .number {
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                border: 1px solid #e1e1e1;
+                padding-top: 2px;
+                background-color: #fff;
+                display: flex;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+            }
+        }
+
+        .step-text {
+            margin-left: 30px;
+            max-width: 330px;
+
+            .number-label {
+                text-transform: uppercase;
+                color: #333;
+                letter-spacing: 0.1em;
+                margin-top: 0px;
+                font-weight: 500;
+                font-size: 15px;
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        .step .step-text > .number-label {
+            font-size: 13px;
+        }
+    }
+}

@@ -155,6 +155,11 @@
     transition: all .5s .1s;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: #fff
+}
+
+
 @media (min-width: 768px) {
     .navbar-transparent .navbar-brand,
     [class*="navbar-ct"] .navbar-brand {
@@ -208,47 +213,10 @@
         border-color: #FFFFFF;
     }
 
-    .navbar-transparent .btn-default.btn-fill,
-    [class*="navbar-ct"] .btn-default.btn-fill {
-        color: #777777;
-        background-color: #FFFFFF;
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
-
-    .navbar-transparent .btn-default.btn-fill:hover,
-    .navbar-transparent .btn-default.btn-fill:focus,
-    .navbar-transparent .btn-default.btn-fill:active,
-    .navbar-transparent .btn-default.btn-fill.active,
-    .navbar-transparent .open .dropdown-toggle.btn-fill.btn-default,
-    [class*="navbar-ct"] .btn-default.btn-fill:hover,
-    [class*="navbar-ct"] .btn-default.btn-fill:focus,
-    [class*="navbar-ct"] .btn-default.btn-fill:active,
-    [class*="navbar-ct"] .btn-default.btn-fill.active,
-    [class*="navbar-ct"] .open .dropdown-toggle.btn-fill.btn-default {
-        border-color: #FFFFFF;
-        opacity: 1;
-        filter: alpha(opacity=100);
-    }
 
     .navbar-transparent .dropdown-menu .divider {
         background-color: rgba(255, 255, 255, 0.2);
     }
-}
-
-.navbar .navbar-nav > li > a.btn {
-    border-width: 1px;
-    background-color: transparent;
-    font-weight: 600;
-    border-radius: 3px;
-    font-size: 12px;
-    line-height: 1.6em;
-    opacity: 0.8;
-    filter: alpha(opacity=80);
-    padding: 10px 20px;
-    border-color: $main-color;
-    color: $main-color;
-    text-transform: uppercase;
 }
 
 .navbar .navbar-nav > li > a.btn:hover,
@@ -258,32 +226,6 @@
     background-color: transparent;
     color: $button-active;
     border-color: $button-active;
-}
-
-.navbar .navbar-nav > li > a.btn:disabled,
-.navbar .navbar-nav > li > a.btn[disabled],
-.navbar .navbar-nav > li > a.btn.disabled {
-    background-color: transparent;
-    border-color: $main-color;
-}
-
-.navbar .navbar-nav > li > a.btn.btn-fill {
-    color: #FFFFFF;
-    background-color: $main-color;
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
-
-.navbar .navbar-nav > li > a.btn.btn-fill:hover,
-.navbar .navbar-nav > li > a.btn.btn-fill:focus,
-.navbar .navbar-nav > li > a.btn.btn-fill:active,
-.navbar .navbar-nav > li > a.btn.btn-fill.active, .open > .navbar .navbar-nav > li > a.btn.btn-fill.dropdown-toggle {
-    background-color: $button-active;
-    color: $button-text-color;
-}
-
-.navbar .navbar-nav > li > a.btn.btn-fill .caret {
-    border-top-color: #FFFFFF;
 }
 
 .navbar .navbar-nav > li > a.btn:hover,
@@ -326,24 +268,7 @@
     border-color: #FFFFFF;
 }
 
-.navbar .navbar-nav > li > a.btn-white.btn-fill {
-    color: #FFFFFF;
-    background-color: #FFFFFF;
-    opacity: 1;
-    filter: alpha(opacity=100);
-}
 
-.navbar .navbar-nav > li > a.btn-white.btn-fill:hover,
-.navbar .navbar-nav > li > a.btn-white.btn-fill:focus,
-.navbar .navbar-nav > li > a.btn-white.btn-fill:active,
-.navbar .navbar-nav > li > a.btn-white.btn-fill.active, .open > .navbar .navbar-nav > li > a.btn-white.btn-fill.dropdown-toggle {
-    background-color: #FFFFFF;
-    color: #FFFFFF;
-}
-
-.navbar .navbar-nav > li > a.btn-white.btn-fill .caret {
-    border-top-color: #FFFFFF;
-}
 
 .navbar .navbar-nav > li > a.btn-white .caret {
     border-top-color: #FFFFFF;
@@ -353,17 +278,6 @@
 .navbar .navbar-nav > li > a.btn-white.active, .open > .navbar .navbar-nav > li > a.btn-white.dropdown-toggle {
     background-color: #FFFFFF;
     color: #888888;
-}
-
-.navbar .navbar-nav > li > a.btn-white.btn-fill {
-    color: #888888;
-    opacity: .9;
-}
-
-.navbar .navbar-nav > li > a.btn-white.btn-fill:hover,
-.navbar .navbar-nav > li > a.btn-white.btn-fill:focus {
-    color: #888888;
-    opacity: 1;
 }
 
 .navbar-brand > img {
@@ -544,8 +458,8 @@
     }
 
     [class*="navbar-"] .navbar-nav .dropdown > a:hover .caret {
-        border-bottom-color: #777;
-        border-top-color: #777;
+        border-bottom-color: #fff;
+        border-top-color: #fff;
     }
 
     [class*="navbar-"] .navbar-nav .dropdown > a:active .caret {

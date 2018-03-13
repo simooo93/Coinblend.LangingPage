@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import './home.component.scss';
+import { HttpClient } from '@angular/common/http';
+import { WINDOW } from "./../../utils/windowService";
 const symbol = require("./../../../assets/img/symbol.png");
 
 @Component({
@@ -12,6 +14,41 @@ export class HomeComponent {
     myParams: object = {};
     width: number = 100;
     height: number = 100;
+    public email: string = "";
+    public hasError: boolean = false;
+    private emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    constructor(private http: HttpClient, @Inject(WINDOW) private window: Window) {
+
+    }
+
+    sendEmail() {
+        if (!this.emailPattern.test(this.email)) {
+            this.hasError = true;
+
+            return;
+        }
+
+        this.http.post('http://localhost:3003/api/account/email/save', { 'email': this.email }).subscribe(
+            result => {
+                this.window.location.href = 'http://localhost:3000/dev/serve/auth.html#/signup?email=' + this.email;
+            },
+            error => {
+                this.window.location.href = 'http://localhost:3000/dev/serve/auth.html#/signup?email=' + this.email;
+            }
+        );
+    }
+
+    emailOnChange(email: string) {
+        this.hasError = false;
+    }
+
+    scroll(elementId: string) {
+        var el: HTMLElement | null = document.getElementById(elementId);
+        if (el != null) {
+            el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        }
+    }
 
     ngOnInit() {
         this.myStyle = {

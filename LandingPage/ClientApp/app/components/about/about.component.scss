@@ -1,202 +1,109 @@
 ﻿@import './../../../assets/styles/colors.scss';
 
-.background-color-secondary-color {
-    background-color: $background-color;
+.info-icon {
+    .icon {
+        img {
+            height: 200px;
+            margin: auto;
+        }
+    }
 }
 
-.section-our-team .title-header {
-    text-transform: none;
+.quest-subtitle {
+    margin-top: 30px;
+    font-size: 26px;
 }
 
-.section-our-team .button-contact {
-    padding: 25px 0 17px;
+#about {
+    background-color: $brandy-rose;
+
+    .info-icon {
+        p {
+            color: $brandy-rose-darker;
+        }
+    }
+
+    .logo > img {
+        margin: 100px auto;
+        height: 100px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .description.big {
+        font-size: 22px;
+        text-transform: uppercase;
+        color: #333;
+    }
+
+    .values-unit {
+        margin: 45px 0 33px 0;
+        text-align: center;
+    }
+
+    .num {
+        font: 51px/51px CaslonTwoTwentyFour-Book, Arial, Helvetica, sans-serif;
+        margin-bottom: 18px;
+    }
+
+    .num:before {
+        border-bottom: 1px solid #000;
+        content: '';
+        display: inline-block;
+        height: 25px;
+        vertical-align: top;
+        width: 40px;
+        margin-right: 23px;
+    }
+
+    .num:after {
+        margin-left: 23px;
+        border-bottom: 1px solid #000;
+        content: '';
+        display: inline-block;
+        height: 25px;
+        vertical-align: top;
+        width: 40px;
+    }
+
+    .values-unit h4 {
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        line-height: 1.2em;
+        margin-bottom: 11px;
+        text-transform: uppercase;
+    }
+
+    .values-unit p {
+        font-size: 18px;
+        line-height: 1.2em;
+        margin-bottom: 1.5em;
+        color: #826453;
+    }
 }
 
-.section-our-team .text-description {
-    color: #fff;
-    margin: 40px auto;
-    max-width: 760px;
+@media (max-width: 992px) {
 }
 
-.section-our-team .text-white {
-    color: #fff;
+@media (min-width: 768px) and (max-width: 1200px) {
 }
 
-.section-our-team .text-gold {
-    color: #c5a47e;
+@media (max-width: 768px) {
 }
 
-.section.section-our-team .parallax,
-.section-our-team .static-image {
-    height: auto;
+@media (max-width: 414px) {
 }
 
-.section-our-team .image {
-    height: 100%;
-}
+@media (max-width: 500px) {
+    #about .logo > img {
+        margin: 50px auto;
+        height: 50px;
+    }
 
-.section-our-team {
-    padding-bottom: 0;
-}
-
-.section-our-team .container {
-    position: relative;
-    z-index: 100;
-    display: block;
-    margin-top: 30vh;
-    text-align: center;
-}
-
-.section-our-team .container {
-    margin-top: 14vh;
-    margin-bottom: 50px;
-}
-
-
-.card {
-    background: #fff;
-    box-shadow: 0 32px 44px -24px rgba(0, 0, 0, 0.23), 0 20px 25px 0px rgba(0, 0, 0, 0.12), 0 15px 10px -10px rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
-    margin-bottom: 30px;
-    -webkit-transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    -moz-transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    -o-transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    -ms-transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
-    transition: all 370ms cubic-bezier(0.34, 1.61, 0.7, 1);
-}
-
-.card:not(.card-plain):not(.card-price):hover {
-    -webkit-transform: scale(1.03);
-    -moz-transform: scale(1.03);
-    -o-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
-    box-shadow: 0 26px 50px -10px rgba(0, 0, 0, 0.38), 0 10px 20px 0px rgba(0, 0, 0, 0.2), 0 15px 10px -10px rgba(0, 0, 0, 0.2);
-}
-
-.card .subtitle-black {
-    color: #141414;
-}
-
-.section-cards .card a {
-    opacity: .93;
-}
-
-.card p {
-    min-height: 0;
-}
-
-.card .icon {
-    font-size: 75px;
-    line-height: 75px;
-}
-
-.card .icon ~ h3 {
-    margin-top: 5px;
-    margin-bottom: 0px;
-}
-
-.card a {
-    opacity: .85;
-}
-
-.card:hover .header {
-    opacity: 1;
-}
-
-.card h2 {
-    margin-top: 0;
-}
-
-.card img {
-    max-width: 100%;
-}
-
-.card .header img {
-    border-radius: 4px;
-}
-
-.card .image-header,
-.card .header img {
-    width: 100%;
-    border-radius: 4px 4px 0 0;
-}
-
-.card .image-header.image-full,
-.card .header img.image-full {
-    border-radius: 4px;
-}
-
-.card .row .image-header,
-.card .row .header img {
-    width: 100%;
-    border-radius: 4px;
-}
-
-.card .btn {
-    margin-top: 15px;
-}
-
-.card > img {
-    border-radius: 4px;
-}
-
-.card .title {
-    margin-bottom: 5px;
-    color: #333333;
-}
-
-.card .description {
-    font-size: 13px;
-}
-
-.card-member {
-    display: block;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.card-member .content {
-    padding: 25px;
-}
-
-.card-member > img {
-    background: none repeat scroll 0 0 transparent;
-    height: auto;
-    width: 120px;
-    margin: 0 auto;
-}
-
-.card-white {
-    background: #FFFFFF;
-}
-
-.card-plain {
-    border-radius: 0;
-    box-shadow: none;
-    background: none;
-}
-
-.card-plain .image-header {
-    border-radius: 4px;
-}
-
-.avatar {
-    border: 3px solid $main-color;
-    border-radius: 50%;
-    overflow: hidden;
-    max-width: 110px;
-    margin: 0 auto;
-}
-
-.avatar img {
-    width: 100%;
-    height: auto;
-}
-
-@media (max-width: 930px) {
-    .section.section-our-team .title-description {
-        max-width: 550px;
-        margin: 0 auto;
+    .quest-subtitle {
+        font-size: 20px;
     }
 }
